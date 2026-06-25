@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/constants";
 
-const HERO_IMAGE = "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80";
+const HERO_IMAGE = "https://customer-assets.emergentagent.com/job_titan-creator-ai/artifacts/4qkgubqz_Brazilian_women%27s_fashion_store._Beautiful_202606251528%20%283%29.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -127,9 +127,9 @@ export default function Hero() {
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 bg-[#111827]">
               <img
                 src={HERO_IMAGE}
-                alt="Modelo de moda feminina em boutique premium"
+                alt="Modelo feminina em boutique brasileira premium"
                 className="absolute inset-0 h-full w-full object-cover"
-                style={{ objectPosition: "center 20%" }}
+                style={{ objectPosition: "60% center" }}
                 loading="eager"
               />
               {/* Image fade-out gradient */}
