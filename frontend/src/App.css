@@ -1,6 +1,6 @@
 /* App-level styles intentionally minimal — global styles live in index.css */
 .App {
-    background-color: #09090b;
+    background-color: transparent;
     color: #ffffff;
     min-height: 100vh;
 }
