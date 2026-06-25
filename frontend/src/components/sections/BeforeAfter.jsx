@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
 const BEFORE_AFTER_IMAGE =
-  "https://customer-assets.emergentagent.com/job_titan-creator-ai/artifacts/x29dh5ox_image.png";
+  "https://customer-assets.emergentagent.com/job_titan-creator-ai/artifacts/8807lae0_recria_a_imagem_melhore_qualidade_202606251847.jpeg";
 
 export default function BeforeAfter() {
   return (
