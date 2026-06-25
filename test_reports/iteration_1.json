@@ -1,0 +1,32 @@
+{
+  "summary": "Frontend-only smoke + UI flow tests for TITAN CRIATIVOS landing page. All critical sections render, WhatsApp CTAs are correct, anchor scrolling works, FAQ accordion expands, header becomes blurred on scroll, mobile drawer opens, and no horizontal overflow at 1920/768/390 viewports.",
+  "tested_scope": ["frontend", "integration"],
+  "passed": [
+    "Landing page loads (200) at REACT_APP_BACKEND_URL",
+    "All sections render: Hero, HowItWorks(#how), Services, Pricing, FAQ, FinalCTA, Footer",
+    "Hero CTA (hero-cta-primary) href starts with https://wa.me/5562900000000 and target=_blank",
+    "HowItWorks: exactly 5 step cards (how-it-works-step-1..5)",
+    "Services: exactly 8 cards (services-card-0..7)",
+    "FAQ: exactly 4 triggers (faq-trigger-0..3); clicking faq-trigger-0 sets data-state=open",
+    "Pricing: 3 tiers present (start/titan/scale); TITAN tile contains 'Mais popular' badge text",
+    "All 3 pricing CTAs (pricing-cta-start/titan/scale) link to https://wa.me/5562900000000?text=...",
+    "Final CTA button links to https://wa.me/5562900000000?text=...",
+    "Footer social icons present: footer-whatsapp, footer-instagram, footer-email",
+    "Header class changes after scroll and includes 'backdrop' (sticky+blurred effect verified)",
+    "Anchor scroll: clicking nav link href=#pricing scrolls to scrollY=2911 (works)",
+    "No horizontal overflow at 1920x1080, 768x1024, 390x844",
+    "Mobile (390x844): hamburger toggle opens drawer (screenshot confirms 4 links + Solicitar Demonstração CTA visible)"
+  ],
+  "failed": [],
+  "observations": [
+    "SocialProof section uses a section id that does not match '#social-proof' literal — verified visually but counter animation values were not measured in this pass; section content rendered without errors. Recommend confirming testid coverage on SocialProof metrics.",
+    "Mobile drawer container does not appear to have a data-testid like 'mobile-drawer' / 'mobile-menu' on the panel root; the toggle works and drawer renders, but adding a testid on the drawer panel would help future automated tests."
+  ],
+  "action_items": [
+    "Optional: add data-testid='mobile-drawer' to the mobile menu panel root for testability.",
+    "Optional: add data-testid on SocialProof metric counters (e.g., social-proof-metric-stores/delivery/videos/satisfaction) so count-up values can be asserted."
+  ],
+  "success_rate": {"backend": "n/a (skipped per request)", "frontend": "100% of critical flows"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}

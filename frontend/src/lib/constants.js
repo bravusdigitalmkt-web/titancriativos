@@ -1,0 +1,21 @@
+export const BRAND = {
+  name: "Titan Criativos",
+  shortName: "Titan",
+  tagline: "Transformamos fotos dos seus produtos em conteúdo que vende.",
+};
+
+export const WHATSAPP_NUMBER = "5562900000000";
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  "Olá Titan! Quero solicitar uma demonstração."
+)}`;
+
+export const INSTAGRAM_URL = "https://instagram.com/titancriativos";
+export const EMAIL = "contato@titancriativos.com";
+export const EMAIL_HREF = `mailto:${EMAIL}`;
+
+export const NAV_LINKS = [
+  { label: "Como Funciona", href: "#how" },
+  { label: "Serviços", href: "#services" },
+  { label: "Planos", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
+];
