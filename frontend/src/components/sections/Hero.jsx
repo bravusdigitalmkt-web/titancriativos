@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/constants";
 
-const HERO_IMAGE = "https://images.pexels.com/photos/8682792/pexels-photo-8682792.jpeg";
+const HERO_IMAGE = "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -127,8 +127,9 @@ export default function Hero() {
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 bg-[#111827]">
               <img
                 src={HERO_IMAGE}
-                alt="Modelo em ambiente premium Titan"
+                alt="Modelo de moda feminina em boutique premium"
                 className="absolute inset-0 h-full w-full object-cover"
+                style={{ objectPosition: "center 20%" }}
                 loading="eager"
               />
               {/* Image fade-out gradient */}
@@ -151,11 +152,11 @@ export default function Hero() {
               </div>
 
               {/* Bottom card overlay */}
-              <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-4">
+              <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-black/50 backdrop-blur-xl border border-white/10 p-4">
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#94A3B8]">
-                      Conteúdo gerado
+                      Moda feminina · gerado por IA
                     </div>
                     <div className="mt-1 font-display text-xl font-semibold text-white">
                       12 vídeos · 24 stories
@@ -176,11 +177,11 @@ export default function Hero() {
               className="hidden lg:flex absolute -left-10 top-1/3 flex-col gap-2 rounded-2xl bg-[#111827]/90 backdrop-blur-xl border border-white/10 p-4 shadow-2xl"
             >
               <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#94A3B8]">
-                IA · status
+                IA · provador virtual
               </div>
               <div className="flex items-center gap-2 text-sm text-white">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.7)]" />
-                Renderizando coleção #41
+                Renderizando look #41
               </div>
             </motion.div>
           </motion.div>
