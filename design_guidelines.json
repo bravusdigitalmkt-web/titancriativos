@@ -1,0 +1,242 @@
+{
+  "theme_and_archetype": {
+    "domain": "B2B Fashion AI SaaS",
+    "theme": "Dark Mode",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) + Archetype 5 (Luxury)",
+    "reasoning": "The brand requires a 'billion-dollar technology startup' feel (Linear/Vercel) combined with high-end fashion. The dark mode (#09090B) establishes the technical authority, while the dramatic lighting and crisp white text bring in the luxury editorial feel.",
+    "aesthetic": "Linear Look / Humanist Tech, combining subtle technical blueprint grids with specular highlights and deep cinematic shadows."
+  },
+  "typography": {
+    "pairings": {
+      "headings": {
+        "family": "Sora, sans-serif",
+        "usage": "H1, H2, H3, large numerical metrics, and key structural elements.",
+        "attributes": "tracking-tighter, leading-tight"
+      },
+      "body": {
+        "family": "Inter, sans-serif",
+        "usage": "Paragraphs, UI labels, small metadata, lists.",
+        "attributes": "tracking-normal, leading-relaxed"
+      },
+      "mono": {
+        "family": "JetBrains Mono, monospace",
+        "usage": "Technical accents, overlines, subtle data points (Optional, for tech credibility).",
+        "attributes": "uppercase, tracking-[0.2em]"
+      }
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter text-white",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-white",
+      "h3": "text-xl sm:text-2xl font-medium tracking-tight text-white",
+      "body": "text-base sm:text-lg text-[#94A3B8]",
+      "overline": "text-xs font-medium uppercase tracking-[0.2em] text-[#2563EB]"
+    }
+  },
+  "colors": {
+    "background": {
+      "main": "#09090B",
+      "cards": "#111827",
+      "cards_hover": "#1E293B",
+      "surface_glass": "rgba(17, 24, 39, 0.7)"
+    },
+    "primary": {
+      "blue": "#2563EB",
+      "blue_hover": "#1D4ED8",
+      "blue_glow": "rgba(37, 99, 235, 0.2)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#94A3B8",
+      "muted": "#64748B"
+    },
+    "borders": {
+      "subtle": "rgba(255, 255, 255, 0.1)",
+      "highlight": "rgba(255, 255, 255, 0.2)"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at 50% -20%, rgba(37,99,235,0.15), transparent 70%)",
+      "text_gradient": "linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%)",
+      "border_beam": "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing Philosophy. Minimalist density. Lots of whitespace between sections (py-24 to py-32).",
+    "grids": {
+      "bento": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+      "feature_split": "grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24"
+    },
+    "containers": "max-w-7xl mx-auto px-6 lg:px-8",
+    "surface_styles": {
+      "cards": "bg-[#111827] rounded-2xl border border-white/10 shadow-2xl overflow-hidden p-8 transition-colors duration-300 hover:border-white/20 hover:bg-[#1E293B]",
+      "glass_header": "backdrop-blur-xl bg-[#09090B]/80 border-b border-white/10"
+    }
+  },
+  "motion_and_interaction": {
+    "libraries": [
+      "framer-motion",
+      "lenis"
+    ],
+    "patterns": {
+      "scroll": "Smooth scrolling with Lenis for premium weighty feel.",
+      "metrics": "Framer Motion useInView with useMotionValue to animate count-ups.",
+      "hover": "Subtle translation (-translate-y-1), border illumination, and text color brightening.",
+      "entrances": "Staggered fade-up (y: 20, opacity: 0 -> y: 0, opacity: 1) on section scroll."
+    }
+  },
+  "sections_and_components": {
+    "global_rules": {
+      "data_testid": "MANDATORY on all interactive elements (buttons, links, form inputs, accordions)."
+    },
+    "header": {
+      "style": "Glassmorphism, fixed top, z-50.",
+      "components": "Logo, Nav Links (visible on desktop), CTA Button ('Solicitar Demonstração' -> wa.me/5562900000000).",
+      "testid_prefix": "header"
+    },
+    "hero": {
+      "layout": "2-column split (grid lg:grid-cols-2). Left: Typography & Actions. Right: Fashion model in tech office.",
+      "content": {
+        "headline": "Transformamos fotos dos seus produtos em conteúdo que vende.",
+        "subheadline": "Envie apenas as fotos da sua coleção. Nossa inteligência artificial cria imagens, vídeos, legendas e campanhas prontas para Instagram."
+      },
+      "actions": [
+        "Solicitar Demonstração",
+        "Ver Como Funciona"
+      ],
+      "visual": "Right side image must fade softly into the dark background using a gradient mask to avoid hard edges.",
+      "testid_prefix": "hero"
+    },
+    "social_proof": {
+      "layout": "4-column grid (grid-cols-2 md:grid-cols-4).",
+      "metrics": [
+        {
+          "label": "Lojas de Moda",
+          "value": "15.000+"
+        },
+        {
+          "label": "Entrega Média",
+          "value": "24h"
+        },
+        {
+          "label": "Vídeos/mês",
+          "value": "12"
+        },
+        {
+          "label": "Satisfação",
+          "value": "98%"
+        }
+      ],
+      "interaction": "Animated count-up using Framer Motion when scrolled into view.",
+      "testid_prefix": "metrics"
+    },
+    "how_it_works": {
+      "layout": "Interactive vertical timeline or tabbed bento layout.",
+      "steps": [
+        "Envie a Foto do Produto",
+        "IA Entende o Produto",
+        "Gera Modelo Vestindo",
+        "Gera Conteúdo para Instagram",
+        "Receba Conteúdo Pronto"
+      ],
+      "visual": "Use the abstract blue wave mesh as a subtle background texture behind the steps.",
+      "testid_prefix": "how-it-works"
+    },
+    "services": {
+      "layout": "Bento Grid Mode A (Tetris Grid). Asymmetrical layout.",
+      "items": [
+        "Imagens IA",
+        "Reels para Instagram",
+        "Stories",
+        "Carrosséis",
+        "Copywriting",
+        "Voice Over",
+        "Estratégia de Conteúdo",
+        "Calendário de Conteúdo"
+      ],
+      "card_style": "Deep #111827 cards, rounded-2xl, soft inner glow on hover.",
+      "testid_prefix": "services"
+    },
+    "pricing": {
+      "layout": "3-column grid.",
+      "tiers": [
+        {
+          "name": "START",
+          "price": "R$497",
+          "desc": "8 vídeos"
+        },
+        {
+          "name": "TITAN",
+          "price": "R$697",
+          "desc": "12 vídeos (Mais Popular)",
+          "highlight": true
+        },
+        {
+          "name": "SCALE",
+          "price": "R$997",
+          "desc": "20 vídeos"
+        }
+      ],
+      "highlight_strategy": "The TITAN tier gets a primary blue border (#2563EB), a subtle primary blue glow (box-shadow), and an 'Mais Popular' overline.",
+      "testid_prefix": "pricing"
+    },
+    "faq": {
+      "layout": "Single column narrow layout (max-w-3xl mx-auto).",
+      "component": "Shadcn Accordion (customized for dark mode, no white backgrounds, border-b border-white/10).",
+      "questions": [
+        "Como funciona?",
+        "Preciso gravar vídeos?",
+        "Qual o prazo de entrega?",
+        "Posso solicitar alterações?"
+      ],
+      "testid_prefix": "faq"
+    },
+    "final_cta": {
+      "layout": "Full width banner with absolute positioned background image.",
+      "content": "Sua loja merece vender mais. Veja como a Titan pode transformar suas fotos em conteúdo profissional.",
+      "action": "Solicitar Demonstração",
+      "visual": "Background uses the editorial fashion portrait. MUST have a heavy dark overlay (bg-[#09090B]/80) to ensure text is readable (APCA contrast).",
+      "testid_prefix": "final-cta"
+    },
+    "footer": {
+      "layout": "Standard 4-column or flex-between layout.",
+      "elements": [
+        "Logo",
+        "Instagram",
+        "WhatsApp",
+        "Email",
+        "Privacy Policy",
+        "Terms of Service"
+      ],
+      "style": "py-12 border-t border-white/10 text-sm text-[#94A3B8]",
+      "testid_prefix": "footer"
+    }
+  },
+  "media_and_assets": {
+    "images": [
+      {
+        "id": "hero_visual",
+        "url": "https://images.pexels.com/photos/8682792/pexels-photo-8682792.jpeg",
+        "category": "Hero Section Right Side",
+        "description": "Stylish woman in a contemporary office hallway. Represents the 'fashion model inside premium Titan office' concept."
+      },
+      {
+        "id": "final_cta_bg",
+        "url": "https://images.pexels.com/photos/30713515/pexels-photo-30713515.jpeg",
+        "category": "Final CTA Background",
+        "description": "A dramatic portrait of a woman in a dimly lit setting. Editorial fashion style. Used as full-width background with dark overlay."
+      },
+      {
+        "id": "tech_texture",
+        "url": "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4",
+        "category": "How It Works Background / UI Texture",
+        "description": "Abstract blue wavy lines representing AI flow and technology."
+      }
+    ]
+  },
+  "technical_rules": {
+    "icons": "lucide-react",
+    "components": "Shadcn UI (highly customized to match dark aesthetic, pure HTML+Tailwind for complex grids)",
+    "forms_and_links": "All CTA buttons pointing to WhatsApp must use href='https://wa.me/5562900000000' target='_blank' rel='noopener noreferrer'",
+    "routing": "React Router or standard anchor links for single page scrolling.",
+    "testing": "Ensure all buttons, accordion items, and links have data-testid attributes."
+  }
+}
