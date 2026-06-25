@@ -6,6 +6,7 @@ import {
   EMAIL,
   EMAIL_HREF,
   NAV_LINKS,
+  LOGO_URL,
 } from "@/lib/constants";
 
 export default function Footer() {
@@ -17,13 +18,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
-            <div className="flex items-center gap-2">
-              <div className="relative h-8 w-8 rounded-lg bg-[#111827] border border-white/10 flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#2563EB]/40 to-transparent" />
-                <span className="relative font-display text-sm font-bold tracking-tight">
-                  T
-                </span>
-              </div>
+            <div className="flex items-center gap-2.5">
+              <img
+                src={LOGO_URL}
+                alt="Titan Criativos"
+                className="h-10 w-10 rounded-full ring-1 ring-[#2563EB]/40 shadow-[0_0_20px_rgba(37,99,235,0.35)]"
+              />
               <span className="font-display text-[15px] font-semibold tracking-tight text-white">
                 {BRAND.name}
               </span>

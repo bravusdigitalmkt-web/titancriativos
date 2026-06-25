@@ -4,6 +4,9 @@ export const BRAND = {
   tagline: "Transformamos fotos dos seus produtos em conteúdo que vende.",
 };
 
+export const LOGO_URL =
+  "https://customer-assets.emergentagent.com/job_titan-creator-ai/artifacts/xerhwrjj_ChatGPT%20Image%2025%20de%20jun.%20de%202026%2C%2013_24_16.png";
+
 export const WHATSAPP_NUMBER = "5561982394985";
 export const WHATSAPP_DISPLAY = "+55 61 98239-4985";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

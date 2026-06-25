@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { BRAND, NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
+import { BRAND, NAV_LINKS, WHATSAPP_URL, LOGO_URL } from "@/lib/constants";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,13 +29,14 @@ export default function Header() {
         <a
           href="#top"
           data-testid="header-logo"
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-2.5 group"
         >
-          <div className="relative h-8 w-8 rounded-lg bg-[#111827] border border-white/10 flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#2563EB]/40 to-transparent" />
-            <span className="relative font-display text-sm font-bold tracking-tight">T</span>
-          </div>
-          <span className="font-display text-[15px] font-semibold tracking-tight text-white group-hover:text-white/90">
+          <img
+            src={LOGO_URL}
+            alt="Titan Criativos"
+            className="h-9 w-9 rounded-full ring-1 ring-[#2563EB]/40 shadow-[0_0_20px_rgba(37,99,235,0.35)]"
+          />
+          <span className="font-display text-[15px] font-semibold tracking-tight text-white group-hover:text-white/90 hidden sm:inline">
             {BRAND.name}
           </span>
         </a>
